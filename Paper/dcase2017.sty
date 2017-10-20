@@ -1,0 +1,419 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% File:     dcase2016.sty      (LaTeX Document style option "dcase2016")
+%
+% Usage:    \documentclass{article}
+%           \usepackage{dcase2016}
+%
+%           Or for LaTeX 2.09:
+% Usage:    \documentstyle[...,dcase2016,...]{article}
+%
+% Purpose:
+%
+% Style file for DCASE 2016 Manuscripts
+%               (Detection and Classification of Acoustic Scenes and Events 2016
+%                Budapest, Hungary, 3 September 2016
+%                http://www.cs.tut.fi/sgn/arg/dcase2016/)
+%
+% Modified from spconf.sty (Stephen Martucci  -- stephen.martucci@ieee.org)
+%
+% Features:
+%    - correct page size (175mm x 226mm)
+%    - twocolumn format
+%    - boldfaced, numbered, and centered section headings
+%    - correct subsection and subsubsection headings
+%    - use \title{xx} for title, will be typeset all uppercase
+%    - use \name{xx} for author name(s) only, will be typeset in italics
+%    - use \address{xx} for one address of all authors
+%    - use \twoauthors{author1}{address1}{author2}{address2}
+%         for two (or more) authors with two separate addresses
+%    - note: no need for \author nor \date
+%    - optional: can use \thanks{xx} within \name or \twoauthors,
+%         asterisk is not printed after name nor in footnote
+%    - optional: can use \sthanks{xx} after each name within \name or
+%         \twoauthors if different thanks for each author,
+%         footnote symbol will appear for each name and footnote
+%    - optional: use \ninept to typeset text in 9 pt; default is 10pt.
+%
+% Example of use for one or more authors at a common address and
+%    common support. For distinct support acknowledgments,
+%    use \sthanks{xx} after each name.
+%
+%                 \documentstyle[dcase2016]{article}
+%                 \title{Title of the paper}
+%                 \name{George P. Burdell and John Q. Professor
+%                       \thanks{This work was supported by...}}
+%                 \address{Common address, department \\
+%                          City, etc \\
+%                          optional e-mail address}
+%
+%                 \begin{document}
+%  OPTIONAL -->   \ninept            <-- OPTIONAL, for nine pt only
+%                 \maketitle
+%                 \begin{abstract}
+%                 This is the abstract for my paper.
+%                 \end{abstract}
+%                         .
+%                 Insert text of paper
+%                         .
+%                 \end{document}
+%
+% Example of use for two authors at two distinct addresses with only
+%    one support acknowledgment. For distinct support acknowledgments,
+%    use \sthanks{xx} after each name.
+%
+%                 \documentstyle[dcase2016]{article}
+%                 \title{Title of the paper}
+%                 \twoauthors{John Doe
+%                       \thanks{This work was supported by...}}
+%                            {Doe's address, department \\
+%                             City, etc \\
+%                             optional e-mail address}
+%                            {Judy Smith}
+%                            {Smith's address, department \\
+%                             City, etc \\
+%                             optional e-mail address}
+%
+%                 \begin{document}
+%  OPTIONAL -->   \ninept            <-- OPTIONAL, for nine pt only
+%                 \maketitle
+%                 \begin{abstract}
+%                 This is the abstract for my paper.
+%                 \end{abstract}
+%                         .
+%                 Insert text of paper
+%                         .
+%                 \end{document}
+%
+% Preprint Option (Only for preprints, not for submissions!):
+%    - can create a preprint titlepage footer by using the
+%         "preprint" option with the \usepackage{spconf} command
+%    - use \copyrightnotice{\copyright xx} for copyright information
+%    - use \toappear{To appear in xx} for publication name
+% Example of preprint use:
+%
+%                 \documentclass{article}
+%                 \usepackage[preprint]{spconf}
+%                         .
+%                 \copyrightnotice{\copyright\ IEEE 2000}
+%                 \toappear{To appear in {\it Proc.\ ICASSP2000,
+%                    June 05-09, 2000, Istanbul, Turkey}}
+%
+%
+% PLEASE REPORT ANY BUGS
+%
+% "spconf.sty" Author:  
+%   Stephen Martucci -- stephen.martucci@ieee.org, 3 May 2000
+% Updated: 
+%   Lance Cotton, Ulf-Dietrich Braumann, 11 May 2006
+%   
+% Modified by WASPAA orgnization committees: 
+%   Jyri Huopaniemi -- jyri.huopaniemi@research.nokia.com
+%   Youngmoo Kim    -- moo@media.mit.edu, 2001
+%   Mark Bartsch    -- mbartsch@umich.edu, 2003
+%   Heinz Teutsch   -- teutsch@LNT.de, 2005 
+%   Hiroshi Sawada  -- sawada@cslab.kecl.ntt.co.jp, 2007
+%   Arden Huang     -- arden_huang@ieee.org, 2009
+%   Dan Ellis  -- dpwe@ee.columbia.edu, 2011
+%   Bryan Pardo -- pardo@northwestern.edu, 2015
+%
+% Updated:
+%   Emmanouil Benetos -- emmanouil.benetos@qmul.ac.uk, 2016
+%   Annamaria Mesaros -- added \secondlinename definition to allow authors on two lines
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% These commands change default text fonts to the scalable PostScript
+% fonts Times, Helvetica, and Courier. However, they do not change
+% the default math fonts. After conversion to PDF, text will look good
+% at any scale but math symbols and equations may not.
+% If instead you use the PostScript Type 1 implementation of the
+% Computer Modern fonts from the American Mathematical Society, which
+% will make all fonts (text and math) scalable, comment out the
+% following three lines. Those fonts use the same metrics as the Knuth
+% Computer Modern fonts and therefore no font redefinition is needed.
+\renewcommand{\sfdefault}{phv}
+\renewcommand{\rmdefault}{ptm}
+\renewcommand{\ttdefault}{pcr}
+
+%\oddsidemargin  -0.31in
+%\evensidemargin -0.31in
+\oddsidemargin  -6.2truemm
+\evensidemargin -6.2truemm
+
+\topmargin -.5in
+\headheight 12pt
+\headsep 24pt
+\footskip 0.3in
+%\footheight 0truept
+%\footskip 0truept
+\textheight 226truemm
+\textwidth 178truemm
+
+\twocolumn
+\columnsep 8truemm
+\pagestyle{empty}
+
+\emergencystretch=11pt
+
+\def\ninept{\def\baselinestretch{.95}\let\normalsize\small\normalsize}
+
+\def\maketitle{\par
+ \begingroup
+ \def\thefootnote{}
+ \def\@makefnmark{\hbox
+ {$^{\@thefnmark}$\hss}}
+ \if@twocolumn
+ \twocolumn[\@maketitle]
+ \else \newpage
+ \global\@topnum\z@ \@maketitle \fi\@thanks
+ \endgroup
+ \setcounter{footnote}{0}
+ \let\maketitle\relax
+ \let\@maketitle\relax
+ \gdef\thefootnote{\arabic{footnote}}\gdef\@@savethanks{}%
+ \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax}
+
+\def\@maketitle{\newpage
+ \null
+ %\vskip 2em \begin{center}
+ \vskip 1em \begin{center}
+ {\large \bf \@title \par} \vskip 1.5em {\large \lineskip .5em
+\begin{tabular}[t]{c}\@name \\[-1em] \@secondlinename\\ \@address
+ \end{tabular}\par} \end{center}
+ \par
+ \vskip 1.5em}
+
+\def\title#1{\gdef\@title{\uppercase{#1}}}
+\def\name#1{\gdef\@name{{\em #1}\\}}
+\def\secondlinename#1{\gdef\@secondlinename{{\em #1}\\}}
+\def\address#1{\gdef\@address{#1}}
+\gdef\@title{\uppercase{title of paper}}
+\gdef\@name{{\em Name of author}\\}
+\gdef\@secondlinename{}
+\gdef\@address{Address - Line 1 \\
+               Address - Line 2 \\
+               Address - Line 3}
+
+\let\@@savethanks\thanks
+\def\thanks#1{\gdef\thefootnote{}\@@savethanks{#1}}
+\def\sthanks#1{\gdef\thefootnote{\fnsymbol{footnote}}\@@savethanks{#1}}
+
+\def\twoauthors#1#2#3#4{\gdef\@address{}
+   \gdef\@name{\begin{minipage}{0.5\textwidth}\begin{center}\begin{tabular}{@{}c@{}}
+        {\em #1} \\ \\
+        #2\relax
+   \end{tabular}\end{center}\end{minipage}\hfill\begin{minipage}{0.5\textwidth}\begin{center}\begin{tabular}{@{}c@{}}
+        {\em #3} \\ \\
+        #4\relax
+\end{tabular}\end{center}\end{minipage}}}
+
+\def\@sect#1#2#3#4#5#6[#7]#8{
+   \refstepcounter{#1}\edef\@svsec{\csname the#1\endcsname.\hskip 0.6em}
+       \begingroup \ifnum #2=1\bf\centering
+          {\interlinepenalty \@M
+             \@svsec\uppercase{#8}\par}\else\ifnum #2=2\bf
+          \noindent{\interlinepenalty \@M \@svsec #8\par}\else\it
+          \@hangfrom{\hskip\parindent}{\interlinepenalty \@M
+             \@svsec #8\par}\fi\fi\endgroup
+       \csname #1mark\endcsname{#7}\addcontentsline
+         {toc}{#1}{\protect\numberline{\csname the#1\endcsname} #7}
+     \@tempskipa #5\relax
+     \@xsect{\@tempskipa}}
+
+\def\abstract{\begin{center}
+{\bf ABSTRACT\vspace{-.5em}\vspace{0pt}}
+\end{center}}
+\def\endabstract{\par}
+
+% Keyword section, added by Lance Cotton, adapted from IEEEtrans, corrected by Ulf-Dietrich Braumann
+\def\keywords{\vspace{.5em}
+{\bfseries\textit{Index Terms}---\,\relax%
+}}
+\def\endkeywords{\par}
+
+\def\copyrightnotice#1{\gdef\@copyrightnotice{#1}}\let\@copyrightnotice\relax
+\def\toappear#1{\gdef\@toappear{#1}}\let\@toappear\relax
+
+%%% Strings for the preprint titlepage footer:
+
+\newif\if@preprint\@preprintfalse
+\@namedef{ds@preprint}{\global\@preprinttrue}
+\@options
+\def\ps@preprint{\def\mypage{}\let\@mkboth\@gobbletwo\def\@oddhead{}
+  \def\@oddfoot{\rlap{\@toappear}\hfil\mypage\hfil
+    \llap{\@copyrightnotice}
+    \gdef\mypage{\thepage}\gdef\@toappear{}\gdef\@copyrightnotice{}}}
+
+\if@preprint\ps@preprint
+\else\ps@empty\flushbottom\fi
+
+\def\thebibliography#1{\section{References}\list
+ {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+ \advance\leftmargin\labelsep
+ \usecounter{enumi}}
+ \def\newblock{\hskip .11em plus .33em minus .07em}
+ \sloppy\clubpenalty4000\widowpenalty4000
+ \sfcode`\.=1000\relax}
+\let\endthebibliography=\endlist
+
+\flushbottom
+
+
+
+
+%%%%% fancyheading included
+\def\lhead{\@ifnextchar[{\@xlhead}{\@ylhead}}
+\def\@xlhead[#1]#2{\gdef\@elhead{#1}\gdef\@olhead{#2}}
+\def\@ylhead#1{\gdef\@elhead{#1}\gdef\@olhead{#1}}
+
+\def\chead{\@ifnextchar[{\@xchead}{\@ychead}}
+\def\@xchead[#1]#2{\gdef\@echead{#1}\gdef\@ochead{#2}}
+\def\@ychead#1{\gdef\@echead{#1}\gdef\@ochead{#1}}
+
+\def\rhead{\@ifnextchar[{\@xrhead}{\@yrhead}}
+\def\@xrhead[#1]#2{\gdef\@erhead{#1}\gdef\@orhead{#2}}
+\def\@yrhead#1{\gdef\@erhead{#1}\gdef\@orhead{#1}}
+
+\def\lfoot{\@ifnextchar[{\@xlfoot}{\@ylfoot}}
+\def\@xlfoot[#1]#2{\gdef\@elfoot{#1}\gdef\@olfoot{#2}}
+\def\@ylfoot#1{\gdef\@elfoot{#1}\gdef\@olfoot{#1}}
+
+\def\cfoot{\@ifnextchar[{\@xcfoot}{\@ycfoot}}
+\def\@xcfoot[#1]#2{\gdef\@ecfoot{#1}\gdef\@ocfoot{#2}}
+\def\@ycfoot#1{\gdef\@ecfoot{#1}\gdef\@ocfoot{#1}}
+
+\def\rfoot{\@ifnextchar[{\@xrfoot}{\@yrfoot}}
+\def\@xrfoot[#1]#2{\gdef\@erfoot{#1}\gdef\@orfoot{#2}}
+\def\@yrfoot#1{\gdef\@erfoot{#1}\gdef\@orfoot{#1}}
+
+\newdimen\headrulewidth
+\newdimen\footrulewidth
+\newdimen\plainheadrulewidth
+\newdimen\plainfootrulewidth
+\newdimen\headwidth
+\newif\if@fancyplain
+\def\fancyplain#1#2{\if@fancyplain#1\else#2\fi}
+
+% Command to reset various things in the headers:
+% a.o.  single spacing (taken from setspace.sty)
+% and the catcode of ^^M (so that epsf files in the header work if a
+% verbatim crosses a page boundary)
+\def\fancy@reset{\restorecr
+ \def\baselinestretch{1}%
+ \ifx\undefined\@newbaseline% NFSS not present; 2.09 or 2e
+  \ifx\@currsize\normalsize\@normalsize\else\@currsize\fi%
+ \else% NFSS (2.09) present
+  \@newbaseline%
+ \fi}
+
+% Initialization of the head and foot text.
+
+\headrulewidth 0.4pt
+\footrulewidth\z@
+\plainheadrulewidth\z@
+\plainfootrulewidth\z@
+
+\lhead[\fancyplain{}{EVEN}]{\fancyplain{}{ODD}}
+%\lhead[\fancyplain{}{\sl\rightmark}]{\fancyplain{}{\sl\leftmark}}
+%  i.e. empty on ``plain'' pages, \rightmark on even, \leftmark on odd pages
+\chead{}
+%\rhead[\fancyplain{EVEN}{\sl\leftmark}]{\fancyplain{ODD}{\sl\rightmark}}
+%  i.e. empty on ``plain'' pages, \leftmark on even, \rightmark on odd pages
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+% Put together a header or footer given the left, center and
+% right text, fillers at left and right and a rule.
+% The \lap commands put the text into an hbox of zero size,
+% so overlapping text does not generate an errormessage.
+
+\def\@fancyhead#1#2#3#4#5{#1\hbox to\headwidth{\fancy@reset\vbox{\hbox
+{\rlap{\parbox[b]{\headwidth}{\raggedright#2\strut}}\hfill
+\parbox[b]{\headwidth}{\centering#3\strut}\hfill
+\llap{\parbox[b]{\headwidth}{\raggedleft#4\strut}}}\headrule}}#5}
+
+
+\def\@fancyfoot#1#2#3#4#5{#1\hbox to\headwidth{\fancy@reset\vbox{\footrule
+\hbox{\rlap{\parbox[t]{\headwidth}{\raggedright#2\strut}}\hfill
+\parbox[t]{\headwidth}{\centering#3\strut}\hfill
+\llap{\parbox[t]{\headwidth}{\raggedleft#4\strut}}}}}#5}
+
+\def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+
+\def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+\vskip-0.3\normalbaselineskip\vskip-\footrulewidth
+\hrule\@width\headwidth\@height\footrulewidth\vskip0.3\normalbaselineskip}}
+
+\def\ps@fancy{%
+\@ifundefined{@chapapp}{\let\@chapapp\chaptername}{}%for amsbook
+\@ifundefined{chapter}{\def\sectionmark##1{\markboth
+{\uppercase{\ifnum \c@secnumdepth>\z@
+ \thesection\hskip 1em\relax \fi ##1}}{}}%
+\def\subsectionmark##1{\markright {\ifnum \c@secnumdepth >\@ne
+ \thesubsection\hskip 1em\relax \fi ##1}}}%
+{\def\chaptermark##1{\markboth {\uppercase{\ifnum \c@secnumdepth>\m@ne
+ \@chapapp\ \thechapter. \ \fi ##1}}{}}
+\def\sectionmark##1{\markright{\uppercase{\ifnum \c@secnumdepth >\z@
+ \thesection. \ \fi ##1}}}}%
+\csname ps@headings\endcsname % use \ps@headings defaults if they exist
+\ps@@fancy
+\gdef\ps@fancy{\@fancyplainfalse\ps@@fancy}%
+\headwidth\textwidth}
+\def\ps@fancyplain{\ps@fancy \let\ps@plain\ps@plain@fancy}
+\def\ps@plain@fancy{\@fancyplaintrue\ps@@fancy}
+\def\ps@@fancy{%
+\def\@mkboth{\protect\markboth}%
+\def\@oddhead{\@fancyhead\@lodd\@olhead\@ochead\@orhead\@rodd}%
+\def\@oddfoot{\@fancyfoot\@lodd\@olfoot\@ocfoot\@orfoot\@rodd}%
+\def\@evenhead{\@fancyhead\@rodd\@elhead\@echead\@erhead\@lodd}%
+\def\@evenfoot{\@fancyfoot\@rodd\@elfoot\@ecfoot\@erfoot\@lodd}%
+}
+\def\@lodd{\if@reversemargin\hss\else\relax\fi}
+\def\@rodd{\if@reversemargin\relax\else\hss\fi}
+
+\let\latex@makecol\@makecol
+\def\@makecol{\let\topfloat\@toplist\let\botfloat\@botlist\latex@makecol}
+\def\iftopfloat#1#2{\ifx\topfloat\empty #2\else #1\fi}
+\def\ifbotfloat#1#2{\ifx\botfloat\empty #2\else #1\fi}
+\def\iffloatpage#1#2{\if@fcolmade #1\else #2\fi}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\rhead{\footnotesize{16 November 2017, Munich, Germany}}
+\chead{}
+\lhead{\footnotesize{Detection and Classification of Acoustic Scenes and Events 2017}}
+\lfoot{}
+\rfoot{}
+\cfoot{}
+
+% Define itemize
+\def\itemize{\list{$\bullet$}{
+  \setlength{\leftmargin}{5mm}\setlength{\labelsep}{2mm}
+  \setlength{\labelwidth}{2mm}\setlength{\rightmargin}{1mm}
+  \setlength{\itemsep}{1mm}\setlength{\parsep}{0ex}
+  \setlength{\topsep}{2mm}\setlength{\parskip}{0ex}}}
+\def\enditemize{\endlist}
+
+% Define arabicenu
+\def\arabicenu{\list{\arabic{enumi}.}{
+  \setlength{\leftmargin}{5mm}\setlength{\labelsep}{2mm}
+  \setlength{\labelwidth}{2mm}\setlength{\rightmargin}{1mm}
+  \setlength{\itemsep}{1mm}\setlength{\parsep}{0ex}
+  \setlength{\topsep}{2mm}\setlength{\parskip}{0ex}
+  \usecounter{enumi}}}
+\def\endarabicenu{\endlist}
+
+% Define romanenu
+\def\romanenu{\list{\roman{enumi}.}{
+  \setlength{\leftmargin}{6mm}\setlength{\labelsep}{2mm}
+  \setlength{\labelwidth}{4mm}\setlength{\rightmargin}{1mm}
+  \setlength{\itemsep}{1mm}\setlength{\parsep}{0ex}
+  \setlength{\topsep}{2mm}\setlength{\parskip}{0ex}
+  \usecounter{enumi}}}
+\def\endromanenu{\endlist}
+
+%%%% EOF
