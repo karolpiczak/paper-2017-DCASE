@@ -1,0 +1,98 @@
+# Submission information
+submission:
+  # Submission label
+  # Label is used to index submissions, to avoid overlapping codes among submissions
+  # use following way to form your label:
+  # [Last name of corresponding author]_[Abbreviation of institute of the corresponding author]_task[task number]_[index number of your submission (1-4)]
+  label: Piczak_WUT_task1_3
+
+  # Submission name
+  # This name will be used in the results tables when space permits
+  name: Ambience only, 100 bands
+
+  # Submission name abbreviated
+  # This abbreviated name will be used in the results table when space is tight, maximum 10 characters
+  abbreviation: amb100
+
+  # Submission authors in order, mark one of the authors as corresponding author.
+  authors:
+    - lastname: Piczak
+      firstname: Karol
+      email: karol@dvl.pl                 # Contact email address
+      corresponding: true                         # Mark true for one of the authors
+
+      # Affiliation information for the author
+      affiliation:
+        abbreviation: WUT
+        institute: Warsaw University of Technology
+        department: Institute of Computer Science
+        location: Warsaw, Poland
+
+# System information
+system:
+  # System description, meta data provided here will be used to do
+  # meta analysis of the submitted system. Use general level tags, if possible use the tags provided in comments.
+  description:
+
+    # Audio input
+    input_channels: mono                  # e.g. one or combination [mono, binaural, left, right, mixed, ...]
+    input_sampling_rate: 44.1kHz          #
+
+    # Acoustic representation
+    acoustic_features: spectrogram   # e.g one or combination [MFCC, log-mel energies, spectrogram, CQT, ...]
+
+    # Data augmentation methods
+    data_augmentation: time delay, block mixing               # [time stretching, block mixing, pitch shifting, ...]
+
+    # Machine learning
+    machine_learning_method: CNN          # e.g one or combination [GMM, HMM, SVM, kNN, MLP, CNN, RNN, CRNN, NMF, random forest, ensemble, ...]
+
+    # Decision making methods
+    decision_making: majority vote        # [majority vote, ...]
+
+
+  # URL to the source code of the system [optional]
+  source_code: https://github.com/karoldvl/paper-2017-DCASE
+
+# System results
+results:
+
+  # System evaluation result for provided the cross-validation setup.
+  development_dataset:
+
+    # Overall accuracy (mean of class-wise accuracies)
+    overall:
+      accuracy: 80.2
+
+    # Class-wise accuracies
+    class_wise:
+      beach:
+        accuracy: 76.3
+      bus:
+        accuracy: 80.4
+      cafe/restaurant:
+        accuracy: 73.4
+      car:
+        accuracy: 94.9
+      city_center:
+        accuracy: 92.9
+      forest_path:
+        accuracy: 95.8
+      grocery_store:
+        accuracy: 78.5
+      home:
+        accuracy: 70.8
+      library:
+        accuracy: 67.9
+      metro_station:
+        accuracy: 96.2
+      office:
+        accuracy: 95.2
+      park:
+        accuracy: 66.7
+      residential_area:
+        accuracy: 67.6
+      train:
+        accuracy: 67.3
+      tram:
+        accuracy: 79.2
