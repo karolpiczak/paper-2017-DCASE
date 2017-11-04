@@ -110,3 +110,5 @@ If you find this paper useful in some way, you can cite it with the following Bi
     location={Munich, Germany}
 }
 ```
+
+> K. J. Piczak. **The details that matter: Frequency resolution of spectrograms in acoustic scene classification**. In *Proceedings of the Detection and Classification of Acoustic Scenes and Events 2017 Workshop*, Munich, Germany, 2017.
