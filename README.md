@@ -7,8 +7,6 @@
 
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT licensed" title="MIT licensed" /></a>
 
----
-
 > ###### Table of Contents
 >
 >  * [Overview](#overview)
@@ -18,8 +16,6 @@
 >       * [Code](#code)
 >  * [Reference](#reference)
 >  * [Poster](#poster)
-
----
 
 ### Overview
 
