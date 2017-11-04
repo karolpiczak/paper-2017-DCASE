@@ -93,6 +93,9 @@ The `_th_0.5` suffixes denote models with prediction thresholding, so:
 
 will generate a corresponding confusion matrix [`Code/results/run_200_th_0.5.pdf`](Code/results/run_200_th_0.5.pdf).
 
+##### [`/Code/annotator/`](/Code/annotator/)
+
+A very unpolished modification of [CrowdCurio's audio-annotator](https://github.com/CrowdCurio/audio-annotator) JavaScript interface used for creating the `dishes` ([`clues.txt`](Code/clues.txt)) annotation list.
 
 ## Reference
 
