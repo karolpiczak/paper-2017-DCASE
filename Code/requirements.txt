@@ -4,6 +4,6 @@ matplotlib
 numpy
 pandas
 seaborn
-skimage
+scikit-image
 sklearn
 tqdm
