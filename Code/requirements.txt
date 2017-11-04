@@ -1,0 +1,9 @@
+keras
+librosa
+matplotlib
+numpy
+pandas
+seaborn
+skimage
+sklearn
+tqdm
