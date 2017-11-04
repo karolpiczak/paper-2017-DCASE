@@ -7,8 +7,11 @@
 
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT licensed" title="MIT licensed" /></a>
 
+## Overview
 
-## Repository overview:
+
+
+## Repository content
 
 #### [`/Paper/`](/Paper)
 
@@ -16,7 +19,7 @@ LaTeX source code for the paper.
 
 #### [`/Submission/`](/Submission/)
 
-Actual submission package as delivered for DCASE 2017.
+Actual submission package as delivered for [DCASE 2017](http://www.cs.tut.fi/sgn/arg/dcase2017/challenge/submission).
 
 #### [`/Code`](/Code/)
 
@@ -91,9 +94,9 @@ The `_th_0.5` suffixes denote models with prediction thresholding, so:
 will generate a corresponding confusion matrix [`Code/results/run_200_th_0.5.pdf`](Code/results/run_200_th_0.5.pdf).
 
 
-## Citing
+## Reference
 
-BibTeX entry:
+If you find this paper useful in some way, you can cite it with the following BibTeX entry:
 
 ```bibtex
 @inproceedings{piczak2017dcase,
