@@ -70,32 +70,32 @@
 
     - ###### [`/Code/arf/`](/Code/arf/)
 
-    Helper/backend code for generating submissions.
+        Helper/backend code for generating submissions.
 
     - ###### [`/Code/Figures.ipynb`](/Code/Figures.ipynb) & [`/Code/figures/`](/Code/figures/)
 
-    Raw figures with code used for visualization available as a Jupyter notebook ([`Figures.ipynb`](Code/Figures.ipynb)).
+        Raw figures with code used for visualization available as a Jupyter notebook ([`Figures.ipynb`](Code/Figures.ipynb)).
 
     - ###### [`/Code/results/`](/Code/results/)
 
-    Training outputs. The [`eval.py`](Code/eval.py) script creates cross-validation accuracy metrics, list of misclassifications
-    and a confusion matrix for a given system:
+        Training outputs. The [`eval.py`](Code/eval.py) script creates cross-validation accuracy metrics, list of misclassifications
+        and a confusion matrix for a given system:
 
-    ```
-    $ python eval.py run_200
-    ```
+        ```
+        $ python eval.py run_200
+        ```
 
-    The `_th_0.5` suffixes denote models with prediction thresholding, so:
+        The `_th_0.5` suffixes denote models with prediction thresholding, so:
 
-    ```
-    $ python eval.py run_200_th_0.5
-    ```
+        ```
+        $ python eval.py run_200_th_0.5
+        ```
 
-    will generate a corresponding confusion matrix [`Code/results/run_200_th_0.5.pdf`](Code/results/run_200_th_0.5.pdf).
+        will generate a corresponding confusion matrix [`Code/results/run_200_th_0.5.pdf`](Code/results/run_200_th_0.5.pdf).
 
     - ###### [`/Code/annotator/`](/Code/annotator/)
 
-    A very unpolished modification of [CrowdCurio's audio-annotator](https://github.com/CrowdCurio/audio-annotator) JavaScript interface used for creating the `dishes` ([`clues.txt`](Code/clues.txt)) annotation list.
+        A very unpolished modification of [CrowdCurio's audio-annotator](https://github.com/CrowdCurio/audio-annotator) JavaScript interface used for creating the `dishes` ([`clues.txt`](Code/clues.txt)) annotation list.
 
 ### Reference
 
