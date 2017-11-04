@@ -123,7 +123,7 @@ If you find this paper useful in some way, you can cite it with the following Bi
 
 > K. J. Piczak. **The details that matter: Frequency resolution of spectrograms in acoustic scene classification**. In *Proceedings of the Detection and Classification of Acoustic Scenes and Events 2017 Workshop*, Munich, Germany, 2017.
 
-Author version of this paper: [The details that matter: Frequency resolution of spectrograms in acoustic scene classification](karol.piczak.com/papers/Piczak2017-DCASE.pdf).
+Author version of this paper: [The details that matter: Frequency resolution of spectrograms in acoustic scene classification](http://karol.piczak.com/papers/Piczak2017-DCASE.pdf).
 
 ### Poster
 
