@@ -28,10 +28,3 @@ jobs:
           command: |
             . venv/bin/activate
             pytest --pep8 -m pep8 -n0 Code
-      - run:
-          name: PEP 257
-          command: |
-            . venv/bin/activate
-            shopt -s extglob
-            pydocstyle --convention=numpy -v Code
-          when: always
