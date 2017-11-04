@@ -1,0 +1,37 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.1
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "Code/requirements.txt" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run:
+          name: Install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -q pytest pytest-xdist pytest-cov python-coveralls coverage pytest-timeout pep8 pytest-pep8 pylint pytest-pylint pydocstyle
+            pip install -q -r Code/requirements.txt
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "Code/requirements.txt" }}
+      - run: export PYTHONPATH=$PWD:$PYTHONPATH
+      - run:
+          name: PEP 8
+          command: |
+            . venv/bin/activate
+            pytest --pep8 -m pep8 -n0 Code
+      - run:
+          name: PEP 257
+          command: |
+            . venv/bin/activate
+            shopt -s extglob
+            pydocstyle --convention=numpy -v Code
+          when: always
