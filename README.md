@@ -8,17 +8,19 @@
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT licensed" title="MIT licensed" /></a>
 
 
-### Repository overview:
+## Repository overview:
 
-#### `/Paper/`
+#### [`/Paper/`](/Paper)
 
 LaTeX source code for the paper.
 
-#### `/Submission/`
+#### [`/Submission/`](/Submission/)
 
 Actual submission package as delivered for DCASE 2017.
 
-#### `/Code/*.py`
+#### [`/Code`](/Code/)
+
+##### `/Code/*.py`
 
 Source code for experiments.
 
@@ -63,15 +65,15 @@ will train a hybrid model (ambience module + 15 binary event detectors). [`run_d
 a streamlined version with only 1 binary detector pre-trained on typical `cafe/restaurant` sounds
 (kitchenware, cutlery, crockery etc.). Detector pre-training is done with [`train_clues.py`](Code/train_clues.py) based on [`clues.txt`](Code/clues.txt) annotations.
 
-#### `/Code/arf/`
+##### [`/Code/arf/`](/Code/arf/)
 
 Helper/backend code for generating submissions.
 
-#### `/Code/Figures.ipynb` & `/Code/figures/`
+##### [`/Code/Figures.ipynb`](/Code/Figures.ipynb) & [`/Code/figures/`](/Code/figures/)
 
 Raw figures with code used for visualization available as a Jupyter notebook ([`Figures.ipynb`](Code/Figures.ipynb)).
 
-#### `/Code/results/`
+##### [`/Code/results/`](/Code/results/)
 
 Training outputs. The [`eval.py`](Code/eval.py) script creates cross-validation accuracy metrics, list of misclassifications
 and a confusion matrix for a given system:
@@ -87,3 +89,18 @@ The `_th_0.5` suffixes denote models with prediction thresholding, so:
 ```
 
 will generate a corresponding confusion matrix [`Code/results/run_200_th_0.5.pdf`](Code/results/run_200_th_0.5.pdf).
+
+
+## Citing
+
+BibTeX entry:
+
+```bibtex
+@inproceedings{piczak2017dcase,
+    title={The details that matter: Frequency resolution of spectrograms in acoustic scene classification},
+    author={Piczak, Karol J.},
+    booktitle={Proceedings of the Detection and Classification of Acoustic Scenes and Events 2017 Workshop},
+    year={2017},
+    location={Munich, Germany}
+}
+```
