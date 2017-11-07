@@ -39,10 +39,6 @@ The ambience processing model is evaluated with different frequency resolutions 
 
 ###### Results
 
-<p align="center"><img src="_images/validation.gif" alt="Results of the proposed systems" /></p>
-
-
-
 System        |   Fold 1      |   Fold 2      |   Fold 3      |   Fold 4      |   1—4   |   Final (test)
 --------------|---------------|---------------|---------------|---------------|---------|----------------
 `amb40`       |   79.4 (0.5)  |   77.7 (0.8)  | 76.7 (1.0)    |   81.4 (1.0)  |   78.8  |   —
@@ -55,13 +51,15 @@ System        |   Fold 1      |   Fold 2      |   Fold 3      |   Fold 4      | 
 
 > ###### Mean (standard deviation) of validation accuracies across 50 final epochs of training on the development set and official evaluation results for submitted models. Values in percentages.
 
-The results obtained in the experiments indicate that a higher number of mel frequency bands quite uniformly improves the achieved validation accuracy for the ambience only model. Unfortunately, the `detectors` variant shows signs of significant overfitting combined with relatively high training times. This effect is constrained when the detector array is limited to fine-tuning on one pre-trained detector.
+<img src="_images/validation.gif" alt="Results of the proposed systems" />
 
-Looking at the filters in the first layer it seems that the ambience network mostly learns to discriminate frequency patterns, therefore it's plausible why a higher frequency resolution of the input data could be beneficial for classification.
+The results obtained in the experiments indicate that **a higher number of mel frequency bands quite uniformly improves the achieved validation accuracy for the ambience only model**. Unfortunately, the `detectors` variant shows signs of significant overfitting combined with relatively high training times. This effect is constrained when the detector array is limited to fine-tuning on one pre-trained module.
+
+Looking at the filters in the first layer it seems that the ambience network mostly learns to discriminate frequency patterns, therefore it is a plausible explanation why a higher frequency resolution of the input data could be beneficial for classification.
 
 <p align="center"><img src="_images/conv1_filters.gif" alt="Filters learned by the first layer" title="Filters learned by the first layer" /></p>
 
-Further examination would be needed to extrapolate this claim to other datasets and architectures, but preliminary results show that spectrogram resolution could be an important factor influencing the behavior of models in audio classification tasks. Another interesting extension would be to validate the concept of individual detector pre-training with more abundant annotation data and see if incorporating a priori domain knowledge about the problem could enhance the capabilities of the model. 
+Further examination would be needed to extrapolate this claim to other datasets and architectures, but preliminary results show that **spectrogram resolution could be an important factor influencing the behavior of models in audio classification tasks**. Another interesting extension would be to validate the concept of individual detector pre-training with more abundant annotation data and see if incorporating a priori domain knowledge about the problem could enhance the capabilities of the model.
 
 ### Repository content
 
