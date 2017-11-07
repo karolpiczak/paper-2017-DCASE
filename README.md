@@ -1,20 +1,19 @@
+<a href="http://karol.piczak.com/papers/Piczak2017-DCASE.pdf"><img src="https://img.shields.io/badge/download%20paper-PDF-ff69b4.svg" alt="Download paper in PDF format" title="Download paper in PDF format" align="right" /></a>
+
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT licensed" title="MIT licensed" align="right" /></a>
 
 ###### *Paper replication data for:*
 
 ## The details that matter: Frequency resolution of spectrograms in acoustic scene classification
 
-<a href="http://karol.piczak.com/papers/Piczak2017-DCASE.pdf"><img src="https://img.shields.io/badge/download%20paper-PDF-ff69b4.svg" alt="Download paper in PDF format" title="Download paper in PDF format" align="right" /></a>
-
-<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT licensed" title="MIT licensed" /></a>
-
 > ###### Table of Contents
 >
 >  * [Overview](#overview)
 >  * [Repository content](#repository-content)
->       * [Paper](#paper)
->       * [Submission](#submission)
->       * [Code](#code)
->  * [Reference](#reference)
+>       * [Paper LaTeX source](#paper)
+>       * [DCASE submission output](#submission)
+>       * [Source code](#code)
+>  * [Citing](#citing)
 >  * [Poster](#poster)
 
 ### Overview
@@ -151,7 +150,7 @@ Further examination would be needed to extrapolate this claim to other datasets 
 
         A very unpolished modification of [CrowdCurio's audio-annotator](https://github.com/CrowdCurio/audio-annotator) JavaScript interface used for creating the `dishes` ([`clues.txt`](Code/clues.txt)) annotation list.
 
-### Reference
+### Citing
 
 If you find this paper useful in some way, you can cite it with the following BibTeX entry:
 
