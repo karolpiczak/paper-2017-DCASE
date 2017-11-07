@@ -51,9 +51,13 @@ System        |   Fold 1      |   Fold 2      |   Fold 3      |   Fold 4      | 
 
 > ###### Mean (standard deviation) of validation accuracies across 50 final epochs of training on the development set and official evaluation results for submitted models. Values in percentages.
 
-<img src="_images/validation.gif" alt="Results of the proposed systems" />
+<p align="center"><img src="_images/validation.gif" alt="Results of the proposed systems" /></p>
 
 The results obtained in the experiments indicate that **a higher number of mel frequency bands quite uniformly improves the achieved validation accuracy for the ambience only model**. Unfortunately, the `detectors` variant shows signs of significant overfitting combined with relatively high training times. This effect is constrained when the detector array is limited to fine-tuning on one pre-trained module.
+
+<p align="center"><img src="_images/run_200_th_0_5.gif" alt="Confusion matrix of the thresholded amb200 model"/></p>
+
+> ###### Confusion matrix of the thresholded `amb200` model.
 
 Looking at the filters in the first layer it seems that the ambience network mostly learns to discriminate frequency patterns, therefore it is a plausible explanation why a higher frequency resolution of the input data could be beneficial for classification.
 
