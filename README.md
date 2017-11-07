@@ -23,7 +23,7 @@ This work describes a submission to the [acoustic scene classification task](www
 
 - The prevailing tendency of convolutional neural network models employed in audio classification tasks is to utilize spectrogram representations limited to 40-60 mel frequency bands. Higher values are rarely chosen despite the additional granularity they introduce:
 
-    ![Comparison of spectrograms with different frequency resolutions](_images/spectrograms.gif)
+    <p align="center"><img src="_images/spectrograms.gif" alt="Comparison of spectrograms with different frequency resolutions" title="Comparison of spectrograms with different frequency resolutions" /></p>
     
     Therefore, the main goal of this paper is to check **how using spectrograms with different frequency resolutions could impact the accuracy in this task**.
 
@@ -31,7 +31,7 @@ This work describes a submission to the [acoustic scene classification task](www
 
 To this end, the proposed system has a simple design coming in two flavors - ambient only or extended with sound event detectors that signal if a template match has occurred anywhere in the whole recording.
 
-![Model structure](_images/model.gif)
+<p align="center"><img src="_images/model.png" alt="Model structure" title="Model structure" /></p>
 
 The ambience processing model is evaluated with different frequency resolutions (`amb*` and `STFT`) and compared with models extended with 15 detector modules trained from scratch (`detectors`) or with a single detector pre-trained on hand-annotated fragments of `cafe/restaurant` recordings with sounds invovling cups, plates, etc. (`dishes`).
 
