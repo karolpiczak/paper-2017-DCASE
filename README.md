@@ -19,7 +19,21 @@
 
 ### Overview
 
+This work describes a submission to the [acoustic scene classification task](www.cs.tut.fi/sgn/arg/dcase2017/challenge/task-acoustic-scene-classification) of the [DCASE 2017 challenge](cs.tut.fi/sgn/arg/dcase2017/). The study is based on the following premises:
 
+- The prevailing tendency of convolutional neural network models employed in audio classification tasks is to utilize spectrogram representations limited to 40-60 mel frequency bands. Higher values are rarely chosen despite the additional granularity they introduce:
+
+    ![Comparison of spectrograms with different frequency resolutions](_images/spectrograms.gif)
+    
+    Therefore, the main goal of this paper is to check **how using spectrograms with different frequency resolutions could impact the accuracy in this task**.
+
+- Most acoustic scenes can be described as a combination of a recurring background (ambient noise) mixed with distinct foreground elements (sound events). Still, [Mafra et al. **(2016)**](https://www.cs.tut.fi/sgn/arg/dcase2016/documents/workshop/SenaMafra-DCASE2016workshop.pdf) have shown that even a single averaged frame can have a good predictive capacity in acoustic scene classification tasks, it is thus likely that a good model should note be overly complicated. **Could these both assumptions be introduced a priori into the architecture of the employed network?**
+
+To this end, the proposed system has a simple design coming in two flavors - ambient only or extended with sound event detectors that signal if a template match has occurred anywhere in the whole recording.
+
+![Model structure](_images/model.gif)
+
+The ambience processing model is evaluated with different frequency resolutions (`amb*` and `STFT`) and compared with models extended with 15 detector modules trained from scratch (`detectors`) or with a single detector pre-trained on hand-annotated fragments of `cafe/restaurant` recordings with sounds invovling cups, plates, etc. (`dishes`).
 
 ### Repository content
 
