@@ -23,9 +23,9 @@ This work describes a submission to the [acoustic scene classification task](www
 
     <p align="center"><img src="_images/spectrograms.gif" alt="Comparison of spectrograms with different frequency resolutions" title="Comparison of spectrograms with different frequency resolutions" /></p>
     
-    Therefore, the main goal of this paper is to check **how using spectrograms with different frequency resolutions could impact the accuracy in this task**.
+    Therefore, the main goal of this paper is to check **how using spectrograms with different frequency resolution could impact the accuracy in this task**.
 
-- Most acoustic scenes can be described as a combination of a recurring background (ambient noise) mixed with distinct foreground elements (sound events). Still, [Mafra et al. **(2016)**](https://www.cs.tut.fi/sgn/arg/dcase2016/documents/workshop/SenaMafra-DCASE2016workshop.pdf) have shown that even a single averaged frame can have a good predictive capacity in acoustic scene classification tasks, it is thus likely that a good model should not be overly complicated. **Could these both assumptions be introduced a priori into the architecture of the employed network?**
+- Most acoustic scenes can be described as a combination of a recurring background (ambient noise) mixed with distinct foreground elements (sound events). Still, [Mafra et al. **(2016)**](https://www.cs.tut.fi/sgn/arg/dcase2016/documents/workshop/SenaMafra-DCASE2016workshop.pdf) have shown that even a single averaged frame can have a good predictive capacity in acoustic scene classification tasks, it is thus likely that a good model should not be overly complicated. **Could both these assumptions be introduced a priori into the architecture of the employed network?**
 
 ###### Model structure
 
@@ -51,13 +51,13 @@ System        |   Fold 1      |   Fold 2      |   Fold 3      |   Fold 4      | 
 
 <p align="center"><img src="_images/validation.gif" alt="Results of the proposed systems" /></p>
 
-The results obtained in the experiments indicate that **a higher number of mel frequency bands quite uniformly improves the achieved validation accuracy for the ambience only model**. Unfortunately, the `detectors` variant shows signs of significant overfitting combined with relatively high training times. This effect is constrained when the detector array is limited to fine-tuning on one pre-trained module.
+Results obtained in the experiments indicate that **increasing the number of mel frequency bands improves accuracy of the ambience model**. The `detectors` variant unfortunately shows signs of significant overfitting combined with higher training times. This effect is constrained in the `dishes` model when the detector array is limited to fine-tuning on one pre-trained module.
 
 <p align="center"><img src="_images/run_200_th_0_5.gif" alt="Confusion matrix of the thresholded amb200 model"/></p>
 
 > ###### Confusion matrix of the thresholded `amb200` model.
 
-Looking at the filters in the first layer it seems that the ambience network mostly learns to discriminate frequency patterns, therefore it is a plausible explanation why a higher frequency resolution of the input data could be beneficial for classification.
+Visualization of filters in the first layer shows that the ambience network essentially learns to discriminate frequency patterns. It is therefore a plausible explanation why higher frequency resolution of input data could be beneficial for classification.
 
 <p align="center"><img src="_images/conv1_filters.gif" alt="Filters learned by the first layer" title="Filters learned by the first layer" /></p>
 
@@ -169,3 +169,6 @@ Author version of this paper: [The details that matter: Frequency resolution of 
 
 ### Poster
 
+<p align="center">
+    <a href="Poster/Piczak2017-DCASE-Poster.pdf"><img src="Poster/Piczak2017-DCASE-Poster.png" alt="DCASE 2017 poster" /></a>
+</p>
