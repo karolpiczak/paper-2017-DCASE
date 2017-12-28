@@ -123,6 +123,12 @@ Further examination would be needed to extrapolate this claim to other datasets 
     - ###### [`/Code/arf/`](/Code/arf/)
 
         Helper/backend code for generating submissions.
+        
+        Adjust the [`/Code/arf/core.py`](/Code/arf/core.py) file to reflect proper paths to the datasets:
+        ```python
+        DATA_PATH = '/volatile/dcase17_1/'
+        TEST_PATH = '/volatile/dcase17_1_eval/'
+        ```
 
     - ###### [`/Code/Figures.ipynb`](/Code/Figures.ipynb) & [`/Code/figures/`](/Code/figures/)
 
