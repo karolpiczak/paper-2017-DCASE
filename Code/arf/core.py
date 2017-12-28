@@ -162,7 +162,7 @@ class Task:
                 scene_id = self.label_encoder.transform([row.scene])[0]
 
                 X.append(np.stack([spec]))
-                y.append(keras.utils.to_categorical(scene_id, self.n_scenes)[0])
+                y.append(keras.utils.to_categorical(scene_id, self.n_scenes).ravel())
 
             X = np.stack(X)
             y = np.array(y)
